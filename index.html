@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> عبود ستور   متجر الأرقام الدولية</title>
+  <title>عبود</title>
+  
+
+ 
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" href="css/all.min.css">
+
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  
+  <header class="site-heade  sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">عبود ستور</a>
+
+      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="list-style: circle;" >
+            <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">شراء رقم</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">حول المتجر</a></li>
+            <li class="nav-item"><a class="nav-link" href="info.html">الأخبار</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+          </ul>
+          
+
+          <!-- أزرار تسجيل الدخول وإنشاء حساب -->
+          <div id="auth-buttons">
+            <button class="btn btn-light ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+              تسجيل الدخول
+            </button>
+            <button class="btn btn-warning ms-3" data-bs-toggle="modal" data-bs-target="#registerModal">
+              إنشاء حساب
+            </button>
+          </div>
+
+          <!-- واجهة المستخدم بعد تسجيل الدخول -->
+          <div id="user-area" class="d-none text-white ms-3">
+            <i class="fas fa-user-circle"></i> 
+            <span id="usernameDisplay"></span>               
+            <button id="logoutBtn" class="btn btn-sm btn-danger ms-2">تسجيل خروج</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- رسالة ترحيب متحركة -->
+  <section  class="welcome text-center text-white  py-3">
+    <h1 class="animated-text">
+      مرحباً بكم في أول متجر إلكتروني في اليمن يوفر الأرقام الدولية لتفعيل مواقع التواصل الاجتماعي
+    </h1>
+  </section>
+
+  <!-- سلايدر الصور (Bootstrap Carousel)-->
+  <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel"><!--mainCarousel  يستخدم للربط بين ازرار التحكم-->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/whatsapp.jpg" class="d-block w-100" alt="واتساب">
+        <div class="carousel-caption ">
+          <h5>عبودستور</h5>
+          <p>اشترِ رقم واتساب مميز لتفعيل حسابك بسهولة.</p>
+        </div>
+       </div>
+      <div class="carousel-item">
+        <img src="images/facebook.jpg" class="d-block w-100" alt="فيسبوك">
+        <div class="carousel-caption ">
+          <h5>عبودستور</h5>
+          <p>فعل حسابك على فيسبوك بأرقام دولية آمنة.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/telegram.jpg" class="d-block w-100" alt="تيليجرام">
+        <div class="carousel-caption">
+          <h5>عبودستور</h5>
+          <p>احصل على رقم لتفعيل تيليجرام بسرعة.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- محتوى رئيسي مع aside -->
+  <main class="container my-5 d-flex"><!--يخلي المحتوا داخل جدود بعرض محدد-->
+    <section class="flex-grow-1"><!--flex-grow-1  يجعل هذهالقسمياخذ اكبر مساحه -->
+      <h2 class="text-center mb-5">المواقع المتوفرة</h2>
+      <div class="grid-sites">
+        <!-- واتساب -->
+        <div class="site-card">
+          <i class="fab fa-whatsapp fa-3x text-success"></i>
+          <h5>واتساب</h5>
+          <p>السعر: $5</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">شراء</button>
+        </div>
+        <!-- فيسبوك -->
+        <div class="site-card" >
+          <i class="fab fa-facebook fa-3x text-primary"></i>
+          <h5>فيسبوك</h5>
+          <p>السعر:$ 4</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">شراء</button>
+        </div>
+        <!-- تيليجرام -->
+        <div class="site-card">
+          <i class="fab fa-telegram fa-3x text-info"></i>
+          <h5>تيليجرام</h5>
+          <p>السعر: 3$</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">شراء</button>
+        </div>
+        <!-- بطاقة إنستجرام -->
+<div class="site-card">
+  <i class="fab fa-instagram fa-3x text-danger"></i>
+  <h5>إنستجرام</h5>
+  <p>سعر:$ 6</p>
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">شراء</button>
+</div>
+<!-- بطاقة X -->
+<div class="site-card">
+  <i class="fab fa-x-twitter fa-3x text-dark"></i>
+  <h5> تويتر</h5>
+  <p>سعر:$ 5</p>
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">شراء</button>
+</div>
+
+
+      </div>
+    </section>
+
+    <!-- Aside -->
+    <aside class="ms-4 p-3 bg-light border rounded">
+      <h5>مميزات المتجر</h5>
+      <ul>
+        <li>✔ أرقام دولية مضمونة.</li>
+        <li>✔ استلام الكود بسرعة.</li>
+        <li>✔ دعم فني متواصل.</li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- التعليمات -->
+  <section id="instructions" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">التعليمات</h2>
+      <p class="lead text-center mb-4">
+        في هذا القسم ستتعرف على كيفية استخدام المتجر خطوة بخطوة، وكيفية حماية رقمك من الحظر، وكيفية طلب الأكواد الخاصة بك:
+      </p>
+      <ol class="list-group list-group-numbered">
+        <li class="list-group-item">قم بإنشاء حساب جديد من خلال زر "إنشاء حساب".</li>
+        <li class="list-group-item">سجل دخولك باستخدام البريد الإلكتروني وكلمة المرور.</li>
+        <li class="list-group-item">اختر المنصة (واتساب، فيسبوك، تيليجرام) ثم اضغط شراء.</li>
+        <li class="list-group-item">انتقل إلى صفحة "التعليمات" للحصول على تفاصيل حول كيفية استلام الكود.</li>
+        <li class="list-group-item">للحفاظ على الرقم من الحظر، تجنب استخدامه لأكثر من حساب أو مشاركته مع الآخرين.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3">
+    <p>© 2025 عبود ستور - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <!-- Modal تسجيل الدخول -->
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">تسجيل الدخول</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-1">
+              <label class="form-label">البريد الإلكتروني</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">كلمة المرور</label>
+              <input type="password" class="form-control" id="password" required minlength="6">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">تسجيل الدخول</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal إنشاء حساب -->
+  <div class="modal fade" id="registerModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">إنشاء حساب جديد</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="registerForm">
+            <div class="mb-3">
+              <label class="form-label">الاسم الكامل</label>
+              <input type="text" class="form-control" id="fullname" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">البريد الإلكتروني</label>
+              <input type="email" class="form-control" id="regEmail" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">كلمة المرور</label>
+              <input type="password" class="form-control" id="regPassword" required minlength="6">
+            </div>
+            <button type="su
+            bmit" class="btn btn-warning w-100">تسجيل</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast bg-success text-white" role="alert">
+      <div class="d-flex">
+        <div class="toast-body">تم تسجيل الدخول بنجاح 🎉</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- المتطلب رقم 12-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
